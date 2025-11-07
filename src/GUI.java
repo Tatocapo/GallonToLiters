@@ -31,12 +31,16 @@ public class GUI extends javax.swing.JFrame {
                try {
                    String input = galonTextField.getText();
                    double gallon = Double.parseDouble(input);
-                   Gallon g = new Gallon(gallon);
-                   double liters = g.getLiters();
-                   resultLabel.setText( liters + " liters");
+                   if (gallon < 0 ) {
+                       resultLabel.setText("Enter positive number.");
+                   }else {
+                       Gallon g = new Gallon(gallon);
+                       double liters = g.getLiters();
+                       resultLabel.setText(liters + " liters");
+                   }
                }
-               catch (NumberFormatException ex){
-                   resultLabel.setText("Enter valid number.");
+               catch (NumberFormatException ex ){
+                   resultLabel.setText("Enter valid number not text.");
                }
            }
        });
