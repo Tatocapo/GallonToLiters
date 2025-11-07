@@ -31,9 +31,11 @@ public class GUI extends javax.swing.JFrame {
                try {
                    String input = galonTextField.getText();
                    double gallon = Double.parseDouble(input);
+
                    if (gallon < 0 ) {
                        resultLabel.setText("Enter positive number.");
                    }else {
+
                        Gallon g = new Gallon(gallon);
                        double liters = g.getLiters();
                        resultLabel.setText(liters + " liters");
