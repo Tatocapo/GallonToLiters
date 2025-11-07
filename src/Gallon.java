@@ -1,6 +1,6 @@
 public class Gallon {
-    double gallon;
-    double liters;
+    private double gallon;
+    private double liters;
 
     public Gallon(double gallon) {
         this.gallon = gallon;
