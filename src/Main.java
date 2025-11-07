@@ -1,13 +1,13 @@
-import javax.swing.*;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("-------------------------");
 
-        UI ui = new UI();
+        //pouzivanie GUI
+        GUI ui = new GUI();
         ui.set();
 
 
+        //basic funkcionalita bez UI
         Gallon gallon1 = new Gallon(1);
         Gallon gallon2 = new Gallon(30);
 
